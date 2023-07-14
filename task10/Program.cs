@@ -6,5 +6,10 @@
 
 Console.WriteLine("Введите трёхзначное число");
 int n = Convert.ToInt32(Console.ReadLine());
+if (n < 100 || n >= 1000)
+{
+    Console.WriteLine("Вы ввели не трёхзначное число, повторите ввод");
+    return;
+}
 int middle = (n % 100 - n % 10) / 10;
 Console.WriteLine($"Вторая цифра числа {n} - {middle}");
